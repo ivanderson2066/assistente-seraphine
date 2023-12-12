@@ -7,7 +7,7 @@ import re
 from word2number import w2n
 from datetime import datetime
 
-#fsq3o3Ym45fP/7pcrMmCEO+krfv5tEnzeZgILXHWF5yr5Po= api key restaurante
+
 def speak(text):
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
@@ -33,7 +33,7 @@ def listen():
         return ""
 
 def get_weather(location):
-    api_key = "72880b38fdbd016c47c1bcb23cac776c"  # Sua chave de API aqui
+    api_key = ""  # Sua chave de API aqui
     base_url = f'http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&lang=pt_br'
     response = requests.get(base_url)
     data = response.json()
@@ -311,8 +311,8 @@ def falar_hora_atual():
 
 
 def pesquisar_no_google(query):
-    api_key = "AIzaSyArAP0wDneuNJDAijMxy7wzpUNZZha8DeQ"
-    cx = "81260142d4a044762"  # Você precisa criar um mecanismo de pesquisa personalizado (CX) no Console do Google para obter este valor
+    api_key = "" #sua achave API aqui
+    cx = ""  # Você precisa criar um mecanismo de pesquisa personalizado (CX) no Console do Google para obter este valor
 
     url = f"https://www.googleapis.com/customsearch/v1?q={query}&key={api_key}&cx={cx}"
 
@@ -334,7 +334,7 @@ def pesquisar_no_google(query):
 ##filmes
 
 def obter_filmes_populares(numero_filmes=5):
-    api_key = "70e7dd8fc4e7d9a09fbb3b998635d3fb"
+    api_key = ""#sua chave API aqui
     url = f'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key={api_key}'
     params = {
         'api_key': api_key,
